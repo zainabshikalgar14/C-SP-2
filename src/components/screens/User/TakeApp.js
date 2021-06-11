@@ -24,7 +24,7 @@ function TakeApp(props) {
         contract.methods.grantAccess(spAdd).send({
           from:props.accAdd
         }).then(function(res){
-          toast.success('Access Granted',{
+          toast.success('Access Allowed',{
             position: "top-left",
             autoClose: 4000,
           })
@@ -40,7 +40,7 @@ function TakeApp(props) {
     return(
         <div>
         <Typography variant="h4" component="h2" color = 'textSecondary'> 
-             Grant Access To Service Provider
+              Allow Service Provider Access
         </Typography>
         <form className={classes.root}  onSubmit = {grantAccess} autoComplete="off">
         <TextField  id="standard-basic" label="Service Provider Address" variant="standard" required 
